@@ -107,6 +107,7 @@ vn<-visNetwork(my.nodes,my.edges,width = "1000px",height = "800px")%>%visIgraphL
 vn
 visSave(vn, file = "/home/ospcx/GitProyects/BCDR-D01_kruskal_primm_alg/data/characteristics/network.html", background = "white")
 
+data1<-toVisNetworkData(msTreeKruskal(red$E, red$V))
 data1<-toVisNetworkData(mst(red, algorithm = 'prim'))
 my.nodes<-data1$nodes
 my.edges<-data1$edges
